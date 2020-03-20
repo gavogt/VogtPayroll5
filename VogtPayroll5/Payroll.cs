@@ -33,6 +33,8 @@ namespace VogtPayroll5
             DisplayTotalEmployeesHoursWorkedAndGrossPay();
 
             WriteEmployeeListTotalsAndCountToFile(_empList);
+
+            File.Copy(@"C:\Users\Gabriel\source\repos\VogtPayroll5\EmployeeList.txt", @"C:\Users\Gabriel\source\repos\VogtPayroll5\EmployeeListBackup.txt");
         }
 
         public void DisplayTotalEmployeesHoursWorkedAndGrossPay()
@@ -72,7 +74,7 @@ namespace VogtPayroll5
                 st.WriteLine($"Employee name: {employee.EmpName}");
                 st.WriteLine($"Employee hours worked: {employee.HoursWorked}");
                 st.WriteLine($"Employee hourly payrate: {employee.HourlyPayRate:C2}");
-                st.WriteLine($"Employee gross pay: {employee.CalculateGrossPay(employee.HoursWorked, employee.HourlyPayRate):C2}");
+                st.WriteLine($"Employee gross pay: {employee.CalculateGrossPay(employee.HoursWorked, employee.HourlyPayRate)+employee.CalculateOvertimePay(employee.HoursWorked, employee.HourlyPayRate):C2}");
 
             }
 
