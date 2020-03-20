@@ -28,7 +28,7 @@ namespace VogtPayroll5
                 _empList.Add(emp);
             } while (run == true);
 
-            LoopThroughEmployeeInfo(emp.CalculateGrossPay(emp.HoursWorked, emp.HourlyPayRate));
+            LoopThroughEmployeeInfo(emp.CalculateGrossPay(emp.HoursWorked, emp.HourlyPayRate)+emp.CalculateOvertimePay(emp.HoursWorked, emp.HourlyPayRate));
 
             DisplayTotalEmployeesHoursWorkedAndGrossPay();
 

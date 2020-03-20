@@ -21,3 +21,30 @@ Employee gross pay: $645.75
 Employee count: 2
 Employee total of hours worked 83
 Employee total of gross pay $1,291.50
+Employee ID: 42
+Employee name: gaboo
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: $787.50
+
+Employee count: 1
+Employee total of hours worked 42
+Employee total of gross pay $787.50
+Employee ID: 123
+Employee name: gabo
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: $787.50
+
+Employee count: 1
+Employee total of hours worked 42
+Employee total of gross pay $787.50
+Employee ID: 123
+Employee name: gabo
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: $787.50
+
+Employee count: 1
+Employee total of hours worked 42
+Employee total of gross pay $812.50
