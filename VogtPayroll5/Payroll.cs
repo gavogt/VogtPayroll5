@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace VogtPayroll5
 {
@@ -30,6 +31,8 @@ namespace VogtPayroll5
             LoopThroughEmployeeInfo(emp.CalculateGrossPay(emp.HoursWorked, emp.HourlyPayRate));
 
             DisplayTotalEmployeesHoursWorkedAndGrossPay();
+
+            WriteEmployeeListTotalsAndCountToFile(_empList);
         }
 
         public void DisplayTotalEmployeesHoursWorkedAndGrossPay()
@@ -54,6 +57,32 @@ namespace VogtPayroll5
                 totalGrossPay += grossPay;
 
             }
+        }
+
+        public void WriteEmployeeListTotalsAndCountToFile(List<Employee> empList)
+        {
+            //write all employee's pay statement and the final payroll summary into a text file
+            StreamWriter st = File.AppendText(@"C:\Users\Gabriel\source\repos\VogtPayroll5\EmployeeList.txt");
+
+
+            foreach (var employee in empList)
+            {
+                Console.WriteLine(" ");
+                st.WriteLine($"Employee ID: {employee.EmpID}");
+                st.WriteLine($"Employee name: {employee.EmpName}");
+                st.WriteLine($"Employee hours worked: {employee.HoursWorked}");
+                st.WriteLine($"Employee hourly payrate: {employee.HourlyPayRate:C2}");
+                st.WriteLine($"Employee gross pay: {employee.CalculateGrossPay(employee.HoursWorked, employee.HourlyPayRate):C2}");
+
+            }
+
+            st.WriteLine();
+            st.WriteLine($"Employee count: {_empList.Count}");
+            st.WriteLine($"Employee total of hours worked {countHours}");
+            st.WriteLine($"Employee total of gross pay {totalGrossPay:C2}");
+
+            st.Close();
+
         }
     }
 }

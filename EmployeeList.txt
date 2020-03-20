@@ -1,0 +1,23 @@
+Employee ID: 42
+Employee name: gao
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: $787.50
+
+Employee count: 1
+Employee total of hours worked 42
+Employee total of gross pay $787.50
+Employee ID: 42
+Employee name: drmanhattan
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: $787.50
+Employee ID: 126
+Employee name: marco
+Employee hours worked: 41
+Employee hourly payrate: $10.50
+Employee gross pay: $645.75
+
+Employee count: 2
+Employee total of hours worked 83
+Employee total of gross pay $1,291.50
