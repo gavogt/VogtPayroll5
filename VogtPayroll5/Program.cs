@@ -6,7 +6,9 @@ namespace VogtPayroll5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Payroll payroll = new Payroll();
+
+            payroll.Run();
         }
     }
 }
