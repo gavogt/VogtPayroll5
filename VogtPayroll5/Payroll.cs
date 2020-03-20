@@ -16,7 +16,10 @@ namespace VogtPayroll5
 
             do
             {
+
                 emp = payrollConsoleReader.GetEmployeeInfo();
+                run = payrollConsoleReader.ReturnTrueOrFalse();
+
                 _empList.Add(emp);
             } while (run == true);
 

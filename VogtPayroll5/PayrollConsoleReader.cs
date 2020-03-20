@@ -24,5 +24,31 @@ namespace VogtPayroll5
 
             return emp;
         }
+
+        public bool ReturnTrueOrFalse()
+        {
+            string temp;
+            Console.WriteLine("Would you like to add another employee? y/n");
+            temp = Console.ReadLine().ToLower();
+
+            do
+            {
+                if (temp == "y")
+                {
+                    return true;
+                }
+                else if (temp == "n")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter 'y' or 'n'!");
+                    temp = Console.ReadLine().ToLower();
+                }
+            } while (temp != "y" || temp == "n");
+
+            return true;
+        }
     }
 }

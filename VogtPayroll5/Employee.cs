@@ -32,8 +32,8 @@ namespace VogtPayroll5
             Console.WriteLine($"Employee ID: {empID}");
             Console.WriteLine($"Employee name: {empName}");
             Console.WriteLine($"Employee hours worked: {hoursWorked}");
-            Console.WriteLine($"Employee hourly payrate: {hourlyPayRate}");
-            Console.WriteLine($"Employee gross pay: {CalculateGrossPay(hoursWorked, hourlyPayRate)}");
+            Console.WriteLine($"Employee hourly payrate: {hourlyPayRate:C2}");
+            Console.WriteLine($"Employee gross pay: {CalculateGrossPay(hoursWorked, hourlyPayRate):C2}");
         }
     }
 }
