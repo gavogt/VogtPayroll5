@@ -8,28 +8,32 @@ namespace VogtPayroll5
     {
         public Employee GetEmployeeInfo()
         {
-            Employee emp = new Employee();
+            int empID;
+            string empName;
+            int hoursWorked;
+            decimal hourlyPayRate;
+
 
             Console.WriteLine("What is employee's ID?");
-            emp.EmpID = int.Parse(Console.ReadLine());
+            empID = int.Parse(Console.ReadLine());
 
             Console.WriteLine("What is employee's name?");
-            emp.EmpName = Console.ReadLine();
+            empName = Console.ReadLine();
 
             Console.WriteLine("What is the number of hours the employee worked?");
-            emp.HoursWorked = int.Parse(Console.ReadLine());
+            hoursWorked = int.Parse(Console.ReadLine());
 
             Console.WriteLine("What is the payrate of the employee?");
-            emp.HourlyPayRate = decimal.Parse(Console.ReadLine());
+            hourlyPayRate = decimal.Parse(Console.ReadLine());
 
-            return emp;
+            return new Employee(empID, empName, hoursWorked, hourlyPayRate);
         }
 
-        public bool ReturnTrueOrFalse()
+        public bool ReadTrueOrFalseFromConsole()
         {
-            string temp;
+
             Console.WriteLine("Would you like to add another employee? y/n");
-            temp = Console.ReadLine().ToLower();
+            var temp = Console.ReadLine().ToLower();
 
             do
             {
@@ -41,11 +45,10 @@ namespace VogtPayroll5
                 {
                     return false;
                 }
-                else
-                {
-                    Console.WriteLine("Please enter 'y' or 'n'!");
-                    temp = Console.ReadLine().ToLower();
-                }
+
+                Console.WriteLine("Please enter 'y' or 'n'!");
+                temp = Console.ReadLine().ToLower();
+
             } while (temp != "y" || temp == "n");
 
             return true;
