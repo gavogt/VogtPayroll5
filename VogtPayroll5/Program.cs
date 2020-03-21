@@ -28,8 +28,9 @@ namespace VogtPayroll5
                 run = payrollConsoleReader.ReadTrueOrFalseFromConsole();
 
                 empList.Add(emp);
-                payroll.AddEmployees(empList);
+
             } while (run == true);
+            payroll.AddEmployees(empList);
 
             payroll.LoopThroughEmployeeInfo(emp.CalculateGrossPay());
 

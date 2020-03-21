@@ -30,15 +30,13 @@ namespace VogtPayroll5
             {
                 Console.WriteLine();
 
-                employee.DisplayPayStatement(employee.EmpID, employee.EmpName, employee.HoursWorked, employee.HourlyPayRate, grossPay);
+                employee.DisplayPayStatement();
 
                 countHours += employee.HoursWorked;
                 totalGrossPay += grossPay;
 
             }
         }
-
- 
 
         public void AddEmployees(List<Employee> employees)
         {

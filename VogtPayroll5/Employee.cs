@@ -36,12 +36,12 @@ namespace VogtPayroll5
         }
 
 
-        public void DisplayPayStatement(int empID, string empName, int hoursWorked, decimal hourlyPayRate, decimal grossPay)
+        public void DisplayPayStatement()
         {
-            Console.WriteLine($"Employee ID: {empID}");
-            Console.WriteLine($"Employee name: {empName}");
-            Console.WriteLine($"Employee hours worked: {hoursWorked}");
-            Console.WriteLine($"Employee hourly payrate: {hourlyPayRate:C2}");
+            Console.WriteLine($"Employee ID: {EmpID}");
+            Console.WriteLine($"Employee name: {EmpName}");
+            Console.WriteLine($"Employee hours worked: {HoursWorked}");
+            Console.WriteLine($"Employee hourly payrate: {HourlyPayRate:C2}");
             Console.WriteLine($"Employee gross pay: {CalculateGrossPay():C2}");
         }
     }
