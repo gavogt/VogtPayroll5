@@ -6,23 +6,61 @@ namespace VogtPayroll5
 {
     class PayrollConsoleReader
     {
+        #region GetEmployeeInfo
+        /// <summary>
+        /// Gets employee info
+        /// </summary>
+        /// <returns>An employee</returns>
         public Employee GetEmployeeInfo()
         {
-            Employee emp = new Employee();
 
             Console.WriteLine("What is employee's ID?");
-            emp.EmpID = int.Parse(Console.ReadLine());
+            var empID = int.Parse(Console.ReadLine());
 
             Console.WriteLine("What is employee's name?");
-            emp.EmpName = Console.ReadLine();
+            var empName = Console.ReadLine();
 
             Console.WriteLine("What is the number of hours the employee worked?");
-            emp.HoursWorked = int.Parse(Console.ReadLine());
+            var hoursWorked = int.Parse(Console.ReadLine());
 
             Console.WriteLine("What is the payrate of the employee?");
-            emp.HourlyPayRate = decimal.Parse(Console.ReadLine());
+            var hourlyPayRate = decimal.Parse(Console.ReadLine());
 
-            return emp;
+            return new Employee(empID, empName, hoursWorked, hourlyPayRate);
+
         }
+        #endregion
+
+        #region ReadTrueOrFalseFromConsole
+        /// <summary>
+        /// Read true or false from console for input loop
+        /// </summary>
+        /// <returns>True or False</returns>
+        public bool ReadTrueOrFalseFromConsole()
+        {
+
+            Console.WriteLine("Would you like to add another employee? y/n");
+            var temp = Console.ReadLine().ToLower();
+
+            do
+            {
+                if (temp == "y")
+                {
+                    return true;
+                }
+                else if (temp == "n")
+                {
+                    return false;
+                }
+
+                Console.WriteLine("Please enter 'y' or 'n'!");
+                temp = Console.ReadLine().ToLower();
+
+            } while (temp != "y" || temp == "n");
+
+            return true;
+
+        }
+        #endregion
     }
 }

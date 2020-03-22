@@ -6,34 +6,54 @@ namespace VogtPayroll5
 {
     class Employee
     {
-        public int EmpID { get; set; }
-        public string EmpName { get; set; }
+        public int EmpID { get; }
+        public string EmpName { get; }
 
-        public int HoursWorked { get; set; }
+        public int HoursWorked { get;}
 
-        public decimal HourlyPayRate { get; set; }
+        public decimal HourlyPayRate { get; }
 
-        public decimal CalculateGrossPay(int hours, decimal rate)
+        public Employee(int empID, string empName, int hoursWorked, decimal hourlyPayRate)
+        {
+            EmpID = empID;
+            EmpName = empName;
+            HoursWorked = hoursWorked;
+            HourlyPayRate = hourlyPayRate;
+        }
+
+        #region CalculateGrossPay
+        /// <summary>
+        /// Calculates gross pay
+        /// </summary>
+        /// <returns>Gross pay</returns>
+        public decimal CalculateGrossPay()
         {
 
-            if (hours > 40)
+            if (HoursWorked > 40)
             {
+                int baseHours = 40;
 
-                return hours * (rate * 1.5m);
+                return HourlyPayRate * 40 + ((1.5m * HourlyPayRate)*(HoursWorked-baseHours));
             }
             else
             {
-                return hours * rate;
+                return HoursWorked * HourlyPayRate;
             }
         }
+        #endregion
 
-        public void DisplayPayStatement(int empID, string empName, int hoursWorked, decimal hourlyPayRate, decimal grossPay)
+        #region DisplayPayStatement
+        /// <summary>
+        /// Displays employee pay information
+        /// </summary>
+        public void DisplayPayStatement()
         {
-            Console.WriteLine($"Employee ID: {empID}");
-            Console.WriteLine($"Employee name: {empName}");
-            Console.WriteLine($"Employee hours worked: {hoursWorked}");
-            Console.WriteLine($"Employee hourly payrate: {hourlyPayRate}");
-            Console.WriteLine($"Employee gross pay: {CalculateGrossPay(hoursWorked, hourlyPayRate)}");
+            Console.WriteLine($"Employee ID: {EmpID}");
+            Console.WriteLine($"Employee name: {EmpName}");
+            Console.WriteLine($"Employee hours worked: {HoursWorked}");
+            Console.WriteLine($"Employee hourly payrate: {HourlyPayRate:C2}");
+            Console.WriteLine($"Employee gross pay: {CalculateGrossPay():C2}");
         }
+        #endregion
     }
 }

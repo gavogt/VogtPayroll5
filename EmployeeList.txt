@@ -1,0 +1,54 @@
+Employee ID: 123
+Employee name: Gabriel
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: $787.50
+
+Employee count: 1
+Employee total of hours worked 42
+Employee total of gross pay $812.50
+Employee ID: 123
+Employee name: g
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: $812.50
+
+Employee count: 1
+Employee total of hours worked 42
+Employee total of gross pay $812.50
+Employee ID: 123
+Employee name: 42
+Employee hours worked: 50
+Employee hourly payrate: $50.00
+Employee gross pay: ($950.00)
+
+Employee count: 1
+Employee total of hours worked 50
+Employee total of gross pay ($950.00)
+Employee ID: 123
+Employee name: ge
+Employee hours worked: 42
+Employee hourly payrate: $50.00
+Employee gross pay: ($958.00)
+
+Employee count: 1
+Employee total of hours worked 42
+Employee total of gross pay ($958.00)
+Employee ID: 123
+Employee name: ge
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: ($208.00)
+
+Employee count: 0
+Employee total of hours worked 0
+Employee total of gross pay $0.00
+Employee ID: 123
+Employee name: ga
+Employee hours worked: 42
+Employee hourly payrate: $12.50
+Employee gross pay: ($208.00)
+
+Employee count: 0
+Employee total of hours worked 0
+Employee total of gross pay $0.00
