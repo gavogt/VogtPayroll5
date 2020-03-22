@@ -32,7 +32,7 @@ namespace VogtPayroll5
             } while (run == true);
             payroll.AddEmployees(empList);
 
-            payroll.LoopThroughEmployeeInfo(emp.CalculateGrossPay());
+            payroll.LoopThroughEmployeeInfo();
 
             payroll.DisplayTotalEmployeesHoursWorkedAndGrossPay();
 

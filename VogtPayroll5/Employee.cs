@@ -20,6 +20,12 @@ namespace VogtPayroll5
             HoursWorked = hoursWorked;
             HourlyPayRate = hourlyPayRate;
         }
+
+        #region CalculateGrossPay
+        /// <summary>
+        /// Calculates gross pay
+        /// </summary>
+        /// <returns>Gross pay</returns>
         public decimal CalculateGrossPay()
         {
 
@@ -34,8 +40,12 @@ namespace VogtPayroll5
                 return HoursWorked * HourlyPayRate;
             }
         }
+        #endregion
 
-
+        #region DisplayPayStatement
+        /// <summary>
+        /// Displays employee pay information
+        /// </summary>
         public void DisplayPayStatement()
         {
             Console.WriteLine($"Employee ID: {EmpID}");
@@ -44,5 +54,6 @@ namespace VogtPayroll5
             Console.WriteLine($"Employee hourly payrate: {HourlyPayRate:C2}");
             Console.WriteLine($"Employee gross pay: {CalculateGrossPay():C2}");
         }
+        #endregion
     }
 }

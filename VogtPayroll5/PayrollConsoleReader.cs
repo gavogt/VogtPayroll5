@@ -6,29 +6,36 @@ namespace VogtPayroll5
 {
     class PayrollConsoleReader
     {
+        #region GetEmployeeInfo
+        /// <summary>
+        /// Gets employee info
+        /// </summary>
+        /// <returns>An employee</returns>
         public Employee GetEmployeeInfo()
         {
-            int empID;
-            string empName;
-            int hoursWorked;
-            decimal hourlyPayRate;
-
 
             Console.WriteLine("What is employee's ID?");
-            empID = int.Parse(Console.ReadLine());
+            var empID = int.Parse(Console.ReadLine());
 
             Console.WriteLine("What is employee's name?");
-            empName = Console.ReadLine();
+            var empName = Console.ReadLine();
 
             Console.WriteLine("What is the number of hours the employee worked?");
-            hoursWorked = int.Parse(Console.ReadLine());
+            var hoursWorked = int.Parse(Console.ReadLine());
 
             Console.WriteLine("What is the payrate of the employee?");
-            hourlyPayRate = decimal.Parse(Console.ReadLine());
+            var hourlyPayRate = decimal.Parse(Console.ReadLine());
 
             return new Employee(empID, empName, hoursWorked, hourlyPayRate);
-        }
 
+        }
+        #endregion
+
+        #region ReadTrueOrFalseFromConsole
+        /// <summary>
+        /// Read true or false from console for input loop
+        /// </summary>
+        /// <returns>True or False</returns>
         public bool ReadTrueOrFalseFromConsole()
         {
 
@@ -52,6 +59,8 @@ namespace VogtPayroll5
             } while (temp != "y" || temp == "n");
 
             return true;
+
         }
+        #endregion
     }
 }

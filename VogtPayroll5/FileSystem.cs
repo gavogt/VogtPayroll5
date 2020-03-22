@@ -7,6 +7,11 @@ namespace VogtPayroll5
 {
     class FileSystem
     {
+        #region WriteEmployeeListTotalsAndCountToFile
+        /// <summary>
+        /// Writes employees, total hours and gross pay to a file
+        /// </summary>
+        /// <param name="empList"></param>
         public static void WriteEmployeeListTotalsAndCountToFile(List<Employee> empList)
         {
             //write all employee's pay statement and the final payroll summary into a text file
@@ -27,10 +32,11 @@ namespace VogtPayroll5
             st.WriteLine();
             st.WriteLine($"Employee count: {empList.Count}");
             st.WriteLine($"Employee total of hours worked {payroll.GetTotalHoursWorked()}");
-            st.WriteLine($"Employee total of gross pay {Payroll.totalGrossPay:C2}");
+            st.WriteLine($"Employee total of gross pay {payroll.GetTotalGrossPay():C2}");
 
             st.Close();
 
         }
+        #endregion
     }
 }
