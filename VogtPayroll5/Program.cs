@@ -36,9 +36,9 @@ namespace VogtPayroll5
 
             payroll.DisplayTotalEmployeesHoursWorkedAndGrossPay();
 
-            //FileSystem.WriteEmployeeListTotalsAndCountToFile(empList);
+            FileSystem.WriteEmployeeListTotalsAndCountToFile(empList);
 
-            //File.Copy(@"C:\Users\Gabriel\source\repos\VogtPayroll5\EmployeeList.txt", @"C:\Users\Gabriel\source\repos\VogtPayroll5\EmployeeListBackup.txt");
+            File.Copy(@"C:\Users\Gabriel\source\repos\VogtPayroll5\EmployeeList.txt", @"C:\Users\Gabriel\source\repos\VogtPayroll5\EmployeeListBackup.txt");
         }
 
     }
